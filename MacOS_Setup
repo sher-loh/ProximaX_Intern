@@ -1,0 +1,25 @@
+Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+Cmake
+brew install cmake
+
+Boost
+sudo chown -R $(whoami) /usr/local/lib/pkgconfig
+brew install boost
+
+(base) ljw@Sherlines-MacBook-Pro _build % make
+-- git Version: v1.5.0-dirty
+-- Version: 1.5.0
+-- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES -- failed to compile
+-- Performing Test HAVE_STD_REGEX -- success
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX -- success
+-- Performing Test HAVE_STEADY_CLOCK -- success
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/ljw/google.benchmark.git/_build
+[  1%] Building CXX object src/CMakeFiles/benchmark.dir/complexity.cc.o
+/Users/ljw/google.benchmark.git/src/complexity.cc:93:5: error: use of undeclared identifier 'sigma_gn'
+    sigma_gn += gn_i;
+    ^
