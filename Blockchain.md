@@ -35,7 +35,7 @@ cd cpp-xpx-chain/_build
 ./bin/sirius.bc data/peer-node-3
 ./bin/sirius.bc data/peer-node-4 
 ```
-### Run Supercontract script
+### Run Supercontract script (After BC height reach >20)
 ```sh
 cd go-xpx-chain-sdk
 cd tools
@@ -91,3 +91,8 @@ cd tools
 
 ./replicator_onboarding/replicator_onboarding -url=http://127.0.0.1:3000 -feeStrategy=middle -capacity=2048 -privateKey=FB83889FB84E6D0596C046C27A1A151395666AF79AFB72DBF5B15161040F05E1
 ```
+
+For checking transactions: http://localhost:3000/transactions/confirmed?pageNumber=4
+- refer to the type thru cpp-xpx-chain/resources/supported-entities.json
+
+For checking BC height: http://127.0.0.1:3000/chain/height
