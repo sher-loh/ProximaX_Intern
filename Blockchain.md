@@ -5,13 +5,10 @@
 Drop Catapult Database
 ```
 
-### Change ifconfig
+### createReplicatorsIPs.sh
 ```sh
-sudo ifconfig en1 inet 192.168.20.20
-sudo ifconfig en1 inet 192.168.20.21
-sudo ifconfig en1 inet 192.168.20.22
-sudo ifconfig en1 inet 192.168.20.23
-sudo ifconfig en1 inet 192.168.20.24
+cd cpp-xpx-chain/scripts/bootstrap
+./createReplicatorsIPs.sh
 ```
 
 ### runCatapultServers.sh
@@ -35,7 +32,7 @@ cd cpp-xpx-chain/_build
 ./bin/sirius.bc data/peer-node-3
 ./bin/sirius.bc data/peer-node-4 
 ```
-### Run Supercontract script (After BC height reach >20)
+### Run script (After BC height reach >20)
 ```sh
 cd go-xpx-chain-sdk
 cd tools
